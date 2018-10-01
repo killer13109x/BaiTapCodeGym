@@ -3,12 +3,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         float C, F;
-        String Tieptuc;
+        String Tieptuc; // Khai báo biến Dũng nên tuân theo quy tắc code trong java (coding convention): ví dụ: Tieptuc - > tiepTuc (Quy tắc con lạc đà
         boolean TorF;
         do {
             System.out.println("Nhiệt độ theo độ C là: ");
             Scanner sc = new Scanner(System.in);
-            C = sc.nextFloat();
+            // Nếu có thể thì hãy thực hiện việc khai báo và gán giá trị trong cùng một câu lệnh, thay vì tách rời chúng
+            C = sc.nextFloat();    // khuyến khích việc khai báo biến khi sử dụng ví dụ: float C = sc.nextFloat();
             F = (9 * C) / 5 + 32;
             System.out.println("Nhiệt độ theo thang độ F là: " + F);
             System.out.println("Ấn yes để nhập lại!!!");
