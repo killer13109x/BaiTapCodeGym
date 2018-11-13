@@ -25,7 +25,7 @@ public class KtraSoNguyenTo {
     }
 
     public static boolean ktraSoNguyenTo(int a) {
-        if (a <= 2) {
+        if (a < 2) {
             return false;
         }
         for (int i = 2; i <= a - 1; i++) {
