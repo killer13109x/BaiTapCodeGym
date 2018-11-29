@@ -1,4 +1,4 @@
-package OOP;
+package OOP.stopwatch;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -35,10 +35,23 @@ public class StopWatch {
     public int getElapsedTime() {
         return convertToMiliSecond(endTime) - convertToMiliSecond(startTime);
     }
-    public int convertToMiliSecond(String s){
-        return    Integer.parseInt(s.substring(0, 2)) * 3600000
-                + Integer.parseInt(s.substring(3,5)) * 60000
-                + Integer.parseInt(s.substring(6,8)) * 1000
-                + Integer.parseInt(s.substring(9,12));
+
+    public int convertToMiliSecond(String s) {
+        return Integer.parseInt(s.substring(0, 2)) * 3600000
+                + Integer.parseInt(s.substring(3, 5)) * 60000
+                + Integer.parseInt(s.substring(6, 8)) * 1000
+                + Integer.parseInt(s.substring(9, 12));
+    }
+
+    public void sort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i+1; j<arr.length; j++){
+                if (arr[i] > arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
     }
 }
