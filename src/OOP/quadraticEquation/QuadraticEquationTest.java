@@ -1,11 +1,13 @@
 package OOP.quadraticEquation;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class QuadraticEquationTest {
-    public static void main(String[] args) {
-        QuadraticEquation ob = new QuadraticEquation(1.0,3,1);
-        System.out.println(ob.getResult());
-    }
 
+    @Test
+    void getResult() {
+        QuadraticEquation ob = new QuadraticEquation(1,3,1);
+        System.out.println(ob.getResult());
+
+    }
 }
