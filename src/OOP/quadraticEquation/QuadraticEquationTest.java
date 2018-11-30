@@ -6,7 +6,7 @@ class QuadraticEquationTest {
 
     @Test
     void getResult() {
-        QuadraticEquation ob = new QuadraticEquation(1,3,1);
+        QuadraticEquation ob = new QuadraticEquation(0,-5,3);
         System.out.println(ob.getResult());
 
     }

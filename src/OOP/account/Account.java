@@ -1,6 +1,5 @@
 package OOP.account;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -66,16 +65,16 @@ public class Account {
         return balance * annualInterestRate / 12;
     }
 
-    public String withdraw(double tienRut){
+    public String withdraw(double tienRut) {
         if (balance < tienRut) return "Thất bại";
         else {
-            balance = balance - tienRut;
+            balance = (balance + this.getMonthlyInterest()) - tienRut;
             return "Thành công";
         }
     }
-    public String deposit(double tienGui){
+
+    public String deposit(double tienGui) {
         balance = balance + tienGui;
         return "Thành công";
     }
-
 }
